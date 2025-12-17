@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            /* border: 1px solid red; */
+            display: flex;
+            padding: 0px 16px;
+        }
+
+        .left,
+        .right {
+            width: 50%;
+
+
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+
+            text-transform: uppercase;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .left {
+            color: #4b0082;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .right {
+            color: #118888;
+            font-size: 1.5rem;
+            padding-top: 4px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <section class="left">A1 R&D</section>
+        <section class="right">
+            <ul class="nav-links">
+                <li>about</li>
+                <li>team</li>
+                <li>work</li>
+                <li>pricing</li>
+                <li>contact</li>
+            </ul>
+        </section>
+    </nav>
+</body>
+
+</html>

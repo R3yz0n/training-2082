@@ -1,0 +1,184 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Sagar Thapa Chhetri
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{helvet}
+
+% Use Helvetica as default font
+\renewcommand{\familydefault}{\sfdefault}
+
+% Page geometry
+\geometry{
+    left=0.75in,
+    right=0.75in,
+    top=0.6in,
+    bottom=0.6in
+}
+
+% Colors (matching the resume)
+\definecolor{primaryteal}{HTML}{006666}
+\definecolor{linkcolor}{HTML}{0A9FB5}
+\definecolor{headingcolor}{HTML}{333333}
+\definecolor{datecolor}{HTML}{333333}
+\definecolor{backgroundcream}{HTML}{FFFDE7}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfborder={0 0 0}
+}
+
+% Section formatting with teal line
+\titleformat{\section}{
+    \Large\bfseries\color{headingcolor}
+}{}{0em}{}[\color{primaryteal}\titlerule]
+
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% Subsection formatting
+\titleformat{\subsection}{
+    \large\bfseries\color{black}
+}{}{0em}{}
+
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+    \noindent
+    \begin{tabularx}{\textwidth}{Xr}
+        \textbf{#1} & \textcolor{datecolor}{\textbf{#2}} \\
+        \textit{#3} & \textit{#4}
+    \end{tabularx}
+    \vspace{2pt}
+}
+
+\newcommand{\resumeItem}[1]{
+    \item #1
+}
+
+\newcommand{\projectHeading}[2]{
+    \noindent\textbf{#1} \href{#2}{\textcolor{linkcolor}{[LINK]}}
+}
+
+\newcommand{\projectHeadingNoLink}[1]{
+    \noindent\textbf{#1}
+}
+
+%-------------------------
+% DOCUMENT START
+%-------------------------
+\begin{document}
+
+%-------------------------
+% HEADER
+%-------------------------
+\begin{tabularx}{\textwidth}{Xr}
+    \begin{minipage}[t]{0.65\textwidth}
+        {\fontsize{28}{32}\selectfont\bfseries\color{headingcolor} Sagar Thapa Chhetri}\\[2pt]
+        {\large\bfseries\color{headingcolor}FullStack Developer}
+    \end{minipage}
+    &
+    \begin{minipage}[t]{0.3\textwidth}
+        \raggedleft\small
+        +9779869477113\\
+        reyzon.thapa2020@gmail.com\\
+        {\color{primaryteal}\underline{\href{https://portfolio.com}{Portfolio Website}}} {\color{primaryteal}\underline{\href{https://linkedin.com}{LinkedIn}}} {\color{primaryteal}\underline{\href{https://github.com}{Github}}}
+    \end{minipage}
+\end{tabularx}
+
+\vspace{10pt}
+
+%-------------------------
+% WORK EXPERIENCE
+%-------------------------
+\section{Work Experience}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xr}
+    {\bfseries\color{headingcolor}FullStack Developer at Bootwall R\&D} & {\bfseries\color{datecolor}Feb 2023-Jan 2024}
+\end{tabularx}
+
+\noindent
+I worked as a MERN stack developer in Bootwall R\&D. During my tenure I was involved in the projects like College MS, Gym MS, Ecommerce Apps and Blockchain based Defi apps.
+
+\vspace{12pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xr}
+    {\bfseries\color{headingcolor}Full Stack Developer at Beyond Labs} & {\bfseries\color{datecolor}March 2024-present}
+\end{tabularx}
+
+\vspace{6pt}
+
+{\bfseries\color{headingcolor}Monorepo Architecture}
+\begin{itemize}[leftmargin=20pt, itemsep=2pt, topsep=2pt]
+    \item Worked on a unified monorepo containing BeyondAI Docs, shared APIs, and frontend applications
+    \item Developed frontend using Next.js and backend APIs with Fastify.
+    \item Utilized PostgreSQL for data storage and Redis for caching and session management.
+\end{itemize}
+
+{\bfseries\color{headingcolor}Serverless Architecture using Lambda \& Defi Copilot on NextJS}
+\begin{itemize}[leftmargin=20pt, itemsep=2pt, topsep=2pt]
+    \item Worked on a TDD environment against DB with multiple services like authentication, wallet \& telegram.
+    \item Involved on building Defi copilot using llms like openai, grok-3 using light ruled based instruction.
+    \item Handled db migration from Postgres to DynamoDB using script and batching techniques.
+\end{itemize}
+
+%-------------------------
+% TECH SKILLS
+%-------------------------
+\section{Tech Skills}
+
+\begin{tabularx}{\textwidth}{XX}
+    {\bfseries\color{headingcolor}Front End} & {\bfseries\color{headingcolor}Backend} \\
+    \small React, Redux, Typescript, HTML5, CSS3 & \small Node JS, Restful APIs, Serverless lambda, \\
+    \small TanStack, UI Libraries & \small Postgres, MongoDB \\[8pt]
+    {\bfseries\color{headingcolor}Devops} & {\bfseries\color{headingcolor}Other Skills} \\
+    \small Basics of Docker \& Soft TDD using CI & \small Git/Github, Trello, Slack \\
+    \small Vercel \& Netlify for deployment & \\
+\end{tabularx}
+
+%-------------------------
+% PROJECTS
+%-------------------------
+\section{Projects}
+
+{\bfseries\color{headingcolor}Defi Copilot Agent based on Hedera chain} {\color{primaryteal}\underline{\href{https://example.com}{[LINK]}}}\\
+\small AI-powered DeFi Copilot on Hedera that lets anyone instantly create tokens, view balances, add liquidity, and perform swaps through a single automated interface. It removes all the technical complexity of smart contracts, approvals, ratios, and routing, turning advanced DeFi actions into simple, one-step commands for users of any skill level.
+
+\vspace{8pt}
+
+{\bfseries\color{headingcolor}Food Ordering System}\\
+\small A web based Food ordering system, where user can place an order and pay through web3 wallet. The system also involves the meal management, order processings.
+
+\vspace{8pt}
+
+{\bfseries\color{headingcolor}Trade Flux (DEX)} {\color{primaryteal}\underline{\href{https://example.com}{[LINK]}}}\\
+\small It is an DeFi app where user can set an order based on BTC as a trigger price. User can place a limit order based on the price action of BTC or ETH. It is because the price of BTC is crucial for other ALT tokens. Eg when BTC drops 10\%, most of the ALTs drops by 25-30\% so this system provides us an advantage of buying Alts when BTC drops \& vice versa.
+
+\vspace{8pt}
+
+{\bfseries\color{headingcolor}Petgomania (Pet Commerce \& Adoption)}\\
+\small This is a ecommerce website for pet shops where the shop owner can list their products, execute orders, manage inventories. It also has a feature for pet adoption (Cats \& Dogs). It has a chat feature so that user can interact with the pet owner for queries.
+
+\end{document}
