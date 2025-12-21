@@ -49,6 +49,44 @@
             padding-top: 4px;
 
         }
+
+        main {
+            background-image: url('./assests/laptop.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 98vh;
+            width: 100vw;
+        }
+
+        main {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            padding: 0px 64px;
+
+        }
+
+        main h2 {
+            /* 1 rem is 16px */
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        main h5 {
+            border: 2px solid white;
+            width: fit-content;
+            display: flex;
+            padding: 4px 8px;
+        }
+
+        main h5:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -64,7 +102,17 @@
                 <li>contact</li>
             </ul>
         </section>
+
     </nav>
+    <!-- Hero section -->
+    <main>
+        <h2>Start something that matters</h2>
+        <h6>
+            Stop wasting valuable time with projects that just isn't you.
+        </h6>
+        <h5>Learn more and start today</h5>
+
+    </main>
 </body>
 
 </html>
