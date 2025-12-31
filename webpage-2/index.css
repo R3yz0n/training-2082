@@ -91,3 +91,18 @@ list-style: none;
     padding: 3%;
     border: none;
 }
+
+.agenda-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    gap: 20px;
+    padding: 20px;
+}
+
+.agenda{
+    background-color: rgb(245, 235, 235);
+    border-radius: 6px;
+}
